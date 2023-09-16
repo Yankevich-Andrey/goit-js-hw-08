@@ -17,12 +17,7 @@ function createGalleryMarkup(items) {
       return `
         <li class="gallery__item">
           <a class="gallery__link" href="${original}">
-            <img
-              class="gallery__image"
-              src="${preview}"
-              data-source="${original}"
-              alt="${description}"
-            />
+              <img class="gallery__image" src="${preview}" alt="${description}" />
           </a>
         </li>
       `;
@@ -30,38 +25,10 @@ function createGalleryMarkup(items) {
     .join('');
 }
 
-galleryList.addEventListener('click', onImageClick);
-
-function onImageClick(event) {
-  if (!event.target.classList.contains('gallery__image')) {
-    return;
-  }
-
-  // console.log(`Link = ${event.target.dataset.source}`);
-
-  event.preventDefault();
-
-  const instance = basicLightbox.create(
-    `
-    <img src="${event.target.dataset.source}" width="800" height="600">
-  `,
-    {
-      onShow: instance => {
-        document.addEventListener('keydown', onEscKeyPress);
-      },
-      onClose: instance => {
-        document.removeEventListener('keydown', onEscKeyPress);
-      },
-    }
-  );
-
-  instance.show();
-
-  function onEscKeyPress(event) {
-    if (event.code === 'Escape') {
-      instance.close();
-    }
-  }
-}
+var lightbox = new SimpleLightbox('.gallery a', {
+  captions: true,
+  captionsData: 'alt',
+  captionDelay: 250,
+});
 
 //console.log(galleryItems);
