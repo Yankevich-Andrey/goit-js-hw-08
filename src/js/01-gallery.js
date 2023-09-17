@@ -32,3 +32,5 @@ var lightbox = new SimpleLightbox('.gallery a', {
 });
 
 //console.log(galleryItems);
+let a = 'qwerty';
+
