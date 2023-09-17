@@ -18,7 +18,6 @@ this.off(["close."+this.eventNamespace,"closed."+this.eventNamespace,"nextImageL
               <img class="gallery__image" src="${t}" alt="${o}" />
           </a>
         </li>
-      `).join("")),new(e&&e.__esModule?e.default:e)(".gallery a",{captions:!0,captionsData:"alt",captionDelay:250});//console.log(galleryItems);
-//# sourceMappingURL=01-gallery.df627795.js.map
+      `).join("")),new(e&&e.__esModule?e.default:e)(".gallery a",{captions:!0,captionsData:"alt",captionDelay:250});//# sourceMappingURL=01-gallery.de2cbe2a.js.map
 
-//# sourceMappingURL=01-gallery.df627795.js.map
+//# sourceMappingURL=01-gallery.de2cbe2a.js.map
